@@ -22,7 +22,7 @@ const userSchema = mongoose.Schema({
         maxlenght:10,
     },
     address:{
-         street: String,
+        street: String,
         city: String,
         state: String,
         postalCode: String,
@@ -43,14 +43,6 @@ const userSchema = mongoose.Schema({
 })
 
 export const User = mongoose.model('User', userSchema)
-
-
-
-
-
-
-
-
 
 // username ---
 // email ---
