@@ -89,7 +89,3 @@ export {
   registerUser,
   loginUser,
 }
-//  input (frontend )
-// check inputs , if user already registers
-// ceate user
-// 
