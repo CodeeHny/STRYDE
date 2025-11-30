@@ -60,7 +60,6 @@ const loginUser = asyncHandler(async (req, res) => {
   }
   
   let user = await User.findOne(query);
-  console.log(query, user)
   if (!user) throw new ApiError(404, "User not found");
 
   let isPasswordCorrect = bcrypt.compare(password, user.password);
@@ -74,8 +73,6 @@ const loginUser = asyncHandler(async (req, res) => {
     process.env.ACCESS_TOKEN_SECRET,
     process.env.ACCESS_TOKEN_ACCESS_TOKEN_EXPIRY,
   )
-
-  console.log(accessToken);
 
   return res
     .status(200)
