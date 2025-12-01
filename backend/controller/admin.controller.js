@@ -1,10 +1,12 @@
-import { User } from "../models/user.models";
-import { ApiError } from "../utils/apiError";
-import asyncHandler from "../utils/asyncHandler";
+import { User } from "../models/user.models.js";
+import { ApiError } from "../utils/apiError.js";
+import { ApiResponse } from "../utils/apiResponse.js";
+import asyncHandler from "../utils/asyncHandler.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 const adminLogin = asyncHandler(async (req, res) => {
+
   const { email, password } = req.body;
 
   let user = await User.findOne({ email });
@@ -25,8 +27,6 @@ const adminLogin = asyncHandler(async (req, res) => {
     process.env.ACCESS_TOKEN_ACCESS_TOKEN_EXPIRY
   );
 
-  console.log(accessToken);
-
   return res
     .status(200)
     .cookie("accessToken", accessToken)
@@ -34,3 +34,8 @@ const adminLogin = asyncHandler(async (req, res) => {
       new ApiResponse(200, { user, accessToken }, "User logged in successfully")
     );
 });
+
+
+export {
+  adminLogin,
+}
