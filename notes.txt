@@ -2,5 +2,25 @@ hello
 username  -- codee195_db_user
 pass -- gRbIlHLnQBce0RtE
 
-## test verify jwt 
-## add verification for admin login 
+===========================================================================
+
+## test verify jwt ------
+## add verification for admin login  -----
+
+-----------------------------------
+
+PRODUCT ---
+
+## model
+## add, remove, update,
+## image 
+
+name-
+size - 6,7,8,9,10 -
+brand
+category - sneaker, formal, sports -
+for - men, woman - 
+stock
+images 
+
+
